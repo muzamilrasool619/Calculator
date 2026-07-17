@@ -1,0 +1,85 @@
+h1 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: grey;
+    font-family: monospace;
+}
+
+body {
+    background-color: rgb(201, 207, 212);
+}
+
+.inp {
+    width: 300px;
+    margin: 0 auto;
+    padding-right: 10px;
+    margin: 10px;
+    background-color: rgb(15, 15, 15);
+    height: 50px;
+    size: 50px;
+    font-size: 30px;
+    color: rgb(241, 243, 241);
+    text-align: right;
+    border: 1px solid rgb(27, 1, 1);
+    border-radius: 10px;
+
+}
+
+.button {
+    padding: 10px;
+    margin: 5px;
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    color: rgb(226, 235, 226);
+    font-size: 26px;
+    border: 1px solid rgb(224, 220, 220);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 5px 5px 20px 5px rgb(10, 10, 10);
+
+}
+
+/* .button-zero {
+    padding: 10px;
+    margin: 5px;
+    padding-right: 155px;
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    color: rgb(23, 179, 31);
+    font-size: 50px;
+    border: 1px solid rgb(228, 219, 219);
+    border-radius: 50px;
+    text-align: center;
+    padding-left: 170px;
+    cursor: pointer;
+
+} */
+
+.container2 {
+    width: 330px;
+    height: 200px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 78vh;
+    background-color: rgb(66, 63, 63);
+    border: 20px solid black;
+    border-radius: 30px;
+    /* box-shadow: 0px 0px 20px 5px rgb(15, 15, 15);/ */
+}
+
+
+.button:hover {
+
+    background-color: rgb(58, 59, 58);
+    font-size: 30px;
+
+
+
+
+}
