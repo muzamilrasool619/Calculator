@@ -4,17 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <div class="container2">
         <div class="calculator">
+
             <h1 class="welcome">Welcome to Calculator</h1>
-            <div><input class="inp" type="text" name="" id=""></div>
 
+            <!-- Display -->
+            <div class="display">
+                <input class="inp" type="text" readonly>
+            </div>
 
+            <!-- Row 1 -->
             <div>
                 <button class="button button-ac">AC</button>
                 <button class="button button-ac">DEL</button>
@@ -22,13 +28,15 @@
                 <button class="button">/</button>
             </div>
 
+            <!-- Row 2 -->
             <div>
-                <button class="button" onclick="">9</button>
+                <button class="button">9</button>
                 <button class="button">8</button>
                 <button class="button">7</button>
                 <button class="button">+</button>
             </div>
 
+            <!-- Row 3 -->
             <div>
                 <button class="button">6</button>
                 <button class="button">5</button>
@@ -36,6 +44,7 @@
                 <button class="button">-</button>
             </div>
 
+            <!-- Row 4 -->
             <div>
                 <button class="button">3</button>
                 <button class="button">2</button>
@@ -43,15 +52,18 @@
                 <button class="button">*</button>
             </div>
 
-                <div> 
+            <!-- Row 5 -->
+            <div>
                 <button class="button button-zero">0</button>
                 <button class="button">.</button>
                 <button class="button button-equal">=</button>
             </div>
+
         </div>
     </div>
 
+    <script src="script.js"></script>
+
 </body>
-<script src="script.js"></script>
 
 </html>

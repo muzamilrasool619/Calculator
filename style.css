@@ -5,85 +5,56 @@
 body {
     background-color: rgb(241, 232, 230);
     margin: 0;
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    padding: 15px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
 }
 
 .welcome {
-    padding: 0;
     margin: 8px 0;
     color: rgb(139, 136, 136);
     text-align: center;
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     font-size: 1.9rem;
 }
 
-.inp {
-    width: 350px;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: rgb(15, 15, 15);
-    height: 56px;
-    font-size: 24px;
-    color: rgb(241, 243, 241);
-    text-align: right;
-    border: 1px solid rgb(27, 1, 1);
-    border-radius: 10px;
-}
-
-.button {
-    padding: 10px;
-    margin: 0;
-    width: 100%;
-    height: 64px;
-    background-color: black;
-    color: rgb(226, 235, 226);
-    font-size: 22px;
-    border: 1px solid rgb(224, 220, 220);
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 5px 5px 20px 5px rgb(10, 10, 10);
-}
-
-/* preserved experimental zero styles (commented out) */
-/* .button-zero {
-    padding: 10px;
-    margin: 5px;
-    padding-right: 155px;
-    width: 70px;
-    height: 70px;
-    background-color: black;
-    color: rgb(23, 179, 31);
-    font-size: 50px;
-    border: 1px solid rgb(228, 219, 219);
-    border-radius: 50px;
-    text-align: center;
-    padding-left: 170px;
-    cursor: pointer;
-
-} */
-
 .container2 {
+    width: 100%;
     max-width: 420px;
-    width: 95%;
     padding: 16px;
-    margin: 24px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 60vh;
-    background-color: rgb(66, 63, 63);
+    background: rgb(66, 63, 63);
     border: 12px solid black;
     border-radius: 20px;
-    box-shadow: 0px 0px 20px 5px rgb(15, 15, 15);
+    box-shadow: 0 0 20px 5px rgb(15, 15, 15);
 }
 
 .calculator {
     width: 100%;
-    max-width: 360px;
+}
+
+.inp{
+    display: block;
+    width: 100%;
+    height: 56px;
+    padding: 10px 15px;
+    margin-bottom: 12px;
+    font-size: 24px;
+    background: #0f0f0f;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.display{
+    display: block !important;
+    margin-bottom: 10px;
+}
+
+.inp{
+    width: 100%;
 }
 
 .calculator > div {
@@ -93,36 +64,118 @@ body {
     margin-bottom: 8px;
 }
 
+.button {
+    width: 100%;
+    height: 64px;
+    border: 1px solid rgb(224, 220, 220);
+    border-radius: 12px;
+    background: black;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 5px 5px 20px 5px rgb(10, 10, 10);
+    transition: .3s;
+}
+
 .button:hover {
-    background-color: rgb(58, 59, 58);
-    font-size: 24px;
+    background: rgb(58, 59, 58);
 }
 
 .button-ac {
-    background-color:brown;
-    color: white;
-}
-
-.button-zero {
-    grid-column: span 1;
+    background: brown;
 }
 
 .button-equal {
     grid-column: span 2;
-    background-color: brown;
-    width: 150px;
-    height: 60px;
-    border-radius: 20px;
-    justify-self: center;
+    width: 100%;
+    height: 64px;
+    background: brown;
+    border-radius: 12px;
 }
 
-@media (max-width: 420px) {
-    .button { height: 56px; font-size: 20px; }
-    .inp { height: 48px; font-size: 20px; }
-    .container2 { padding: 12px; border-width: 8px; }
+/* ---------------- Tablet ---------------- */
+
+@media (max-width: 768px) {
+
+    .container2 {
+        max-width: 380px;
+    }
+
+    .button {
+        height: 60px;
+        font-size: 21px;
+    }
+
+    .button-equal {
+        height: 60px;
+    }
+
+    .inp {
+        height: 52px;
+        font-size: 22px;
+    }
 }
 
-@media (max-width: 320px) {
-    .button { height: 48px; font-size: 18px; }
-    .welcome { font-size: 1rem; }
+/* ---------------- Mobile ---------------- */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container2 {
+        width: 100%;
+        padding: 12px;
+        border-width: 8px;
+    }
+
+    .welcome {
+        font-size: 1.4rem;
+    }
+
+    .inp {
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .button {
+        height: 54px;
+        font-size: 19px;
+    }
+
+    .button-equal {
+        height: 54px;
+    }
+}
+
+/* ---------------- Small Mobile ---------------- */
+
+@media (max-width: 360px) {
+
+    .container2 {
+        padding: 10px;
+    }
+
+    .calculator > div {
+        gap: 6px;
+    }
+
+    .inp {
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .button {
+        height: 48px;
+        font-size: 17px;
+    }
+
+    .button-equal {
+        height: 48px;
+    }
+
+    .welcome {
+        font-size: 1.1rem;
+    }
 }
